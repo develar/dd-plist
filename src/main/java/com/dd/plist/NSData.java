@@ -122,6 +122,10 @@ public class NSData extends NSObject {
         return Base64.encodeBytes(bytes);
     }
 
+    public void setBytes(byte[] bytes) {
+        this.bytes = bytes;
+    }
+
     @Override
     public boolean equals(Object obj) {
         return obj.getClass().equals(getClass()) && Arrays.equals(((NSData) obj).bytes, bytes);

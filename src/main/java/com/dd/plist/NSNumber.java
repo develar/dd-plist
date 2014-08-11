@@ -121,6 +121,18 @@ public class NSNumber extends NSObject implements Comparable<Object> {
         }
     }
 
+    public void setValue(double value) {
+        doubleValue = value;
+        longValue = Math.round(value);
+        type = REAL;
+    }
+
+    public void setValue(float value) {
+        doubleValue = value;
+        longValue = Math.round(value);
+        type = REAL;
+    }
+
     /**
      * Creates an integer number.
      *
